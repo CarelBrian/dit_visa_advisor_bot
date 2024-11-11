@@ -133,7 +133,7 @@ La qualité de l'intégration de la base de connaissances joue un rôle crucial 
 
 Pour se rassurer que le système fonctionne bien nous avons essayé plusieurs querries 
 
-![Architecture RAG](images/result3.jpg)
+![Architecture RAG](images/Result3.jpg)
 
 il convient d'envisager des techniques telles que la recherche approximative du plus proche voisin, qui permet d'accélérer 
 considérablement le processus de recherche tout en maintenant des niveaux de précision acceptables
