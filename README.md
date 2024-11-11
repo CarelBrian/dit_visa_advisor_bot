@@ -181,7 +181,7 @@ assistants virtuelles doit générer des réponses presque instantanément et à
 
 - Un autre défis soulevé est la sécurité, nous devons garantir la sécurité et la confidentialité des données
 certaines techniques de cryptage, telles que  le cryptage homomorphique, peuvent être utilisées pour protéger les données sensibles.
-En outre, des audits de sécurité réguliers et le respect des  réglementations pertinentes en matière de protection des données (par exemple, GDPR, HIPAA) 
+En outre, des audits de sécurité réguliere et le respect des  réglementations pertinentes en matière de protection des données (par exemple, GDPR, HIPAA) 
 sont essentiels pour maintenir l'intégrité et la confidentialité du système.*
 
 **Merci**
