@@ -126,11 +126,46 @@ print(response)
 ```
 ### Le résultat
 
+Réponse : en combinant les données récupérées à ses données d’entraînement et aux connaissances stockées, 
+le LLM génère une réponse adaptée au contexte. es bases de données vectorielles organisent les données par similarité,
+pour obtenir les réponses les plus pertinentes
+La qualité de l'intégration de la base de connaissances joue un rôle crucial dans l'efficacité du système RAG
+
+Pour se rassurer que le système fonctionne bien nous avons essayé plusieurs querries 
+
+![Architecture RAG](images/result3.jpg)
+
+il convient d'envisager des techniques telles que la recherche approximative du plus proche voisin, qui permet d'accélérer 
+considérablement le processus de recherche tout en maintenant des niveaux de précision acceptables
+Pour obtenir des meilleurs résultats nous avons pu essayer des différents prompts, modification de Max-token, chunk size,
+
+![Architecture RAG](images/res2.jpg)
+
+Finalemement on pourrait modifier le modèle LLM mais le résultat était impéccable.Pour ce projet nous n'avons pas
+modifier le chunking, le nombre des segements est resté le même.
+
+
+### Déploiement
+
+Après avoir testé le modèle plusieurs fois,  déployer ce modèle en tant qu’API pour pouvoir, ensuite, l’appeler à partir d’une
+application Flask qui se comportera comme le back-end et une application web pplication web front-end pour communiquer 
+avec l’API. L’application web écrite en HTML et en JavaScript pourra accéder au modèle via une requête HTTP communiquant avec le Flask Web Service 
+Python. Le Flask envoie des requêtes HTTP à des fonctions, exécute le code de la fonction et affiche le résultat dans le navigateur 
+Dans notre cas, nous avons appliqué un chemin d’URL (‘/‘) sur une fonction : home. API Running on http://127.0.0.1:5000/
+Il suffit de saisir le lien précédent dans un navigateur Web pour accéder à l’application.
+
+
+Le but de l’application est de prendre des requêtes en entrée (Input) et de les transmettre à travers le modèle et retourne le résultats
+
+
+ ![Architecture RAG](images/api-result.jpg)
+
 
 ### Améliorations futures
 
 * Élargissement de la base de données de documents : ajout de documents plus diversifiés liés à 
-d'autres processus et formalités au Sénégal.
+d'autres processus et formalités au Sénégal. 
+
 
 * Affiner le LLM : affiner le modèle Mistral ou explorer d'autres modèles pour améliorer la 
 qualité de réponse pour les requêtes plus complexes. 
@@ -138,9 +173,18 @@ qualité de réponse pour les requêtes plus complexes.
 * Optimiser la vitesse : explorer l'accélération GPU pour la recherche vectorielle et l'inférence 
 de modèle pour gérer des ensembles de données plus volumineux et des tâches plus intensives
 
+**NOTICE:**
 
+- Il y'a un défi sur l'évolutivité et performances en temps réel. les mises à jours de notre documention comme pour d'autres 
+assistants virtuelles doit générer des réponses presque instantanément et à jour. Nous devons penser à mettre régulieèrement nos documentations
+(sources) à jour, un système de mise à jour automatique serait plus judicieux.
 
+- Un autre défis soulevé est la sécurité, nous devons garantir la sécurité et la confidentialité des données
+certaines techniques de cryptage, telles que  le cryptage homomorphique, peuvent être utilisées pour protéger les données sensibles.
+En outre, des audits de sécurité réguliers et le respect des  réglementations pertinentes en matière de protection des données (par exemple, GDPR, HIPAA) 
+sont essentiels pour maintenir l'intégrité et la confidentialité du système.*
 
+**Merci**
 
 
 
