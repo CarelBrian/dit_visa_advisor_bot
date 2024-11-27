@@ -174,7 +174,7 @@ vous retourne la réponse.
 ### Améliorations futures
 
 * Élargissement de la base de données de documents : ajout des documents plus diversifiés liés à 
-d'autres processus et formalités au Sénégal. 
+d'autres processus et formalités au Sénégal. Egalement; nous devons penser à mettre régulièrement nos documentations (sources) à jour
 
 
 * Affiner le LLM : affiner le modèle Mistral ou explorer d'autres modèles pour améliorer la 
@@ -185,10 +185,11 @@ certaines techniques de cryptage, telles que  le cryptage homomorphique, peuvent
 
 **NOTICE:**
 
-- Il y'a un défi sur l'évolutivité et performances en temps réel. les mises à jours de notre documention comme pour d'autres 
-assistants virtuelles doit générer des réponses presque instantanément et à jour.
-Nous devons penser à mettre régulièrement nos documentations (sources) à jour, un système de mise à jour automatique serait
-plus judicieux.
+Les premiers résultats manquaient des précisions, les réponses étaient rigides et incompletes. Nous avons pensé en premier de 
+modifier la température pour avoir des réponses qui convergentes, malhereusement 
+il y'avait pas grand changement en terme d'exactitute des réponses.  En essayant des differents prompts 
+qui precisent le context la comprehension du modèle a augmenter mais on arrivait toujours pas à obtenir des résultats précis et complets
+En structurant notre documentation ( mettre les réponses sous forme des bullet points) nous avons obtenues des réponses claires et nettes
 
 
 **Merci**
