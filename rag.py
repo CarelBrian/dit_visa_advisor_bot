@@ -11,7 +11,7 @@ load_dotenv()
 class RAG:
     def __init__(self):
         # Chargement de la configuration
-        self.CONFIG_FILE = "C:/Users/oumar/Documents/MASTER IA/ANNE - 2/SEMESTRE 1/TRANSFORMERS_NLP/RAG/NTP/RAG.ini"
+        self.CONFIG_FILE = "RAG.ini"
         self.conf = configparser.ConfigParser()
         self.conf.read(self.CONFIG_FILE)
 

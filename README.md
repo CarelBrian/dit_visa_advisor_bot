@@ -191,7 +191,10 @@ il y'avait pas grand changement en terme d'exactitute des réponses.  En essayan
 qui precisent le context la comprehension du modèle a augmenter mais on arrivait toujours pas à obtenir des résultats précis et complets
 En structurant notre documentation ( mettre les réponses sous forme des bullet points) nous avons obtenues des réponses claires et nettes
 
-
+- Le dossier est **data** sur le repos est sensé avoir  sensé avoir le sous-dossier **Mistral-7B-Instruct-v0.1** qui contient le modèle d'embedding,
+  le dossier sous-dossier **chromadb** pour stocker les vecteurs et **/.cache**.  Ces fichiers sont pas uploadé sur le repos
+  à cause de leur taille significatif
+  
 **Merci**
 
 
