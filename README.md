@@ -2,7 +2,7 @@
 Chatbot pour accompagner les étudiants étrangers à la carte de séjour au Sénégal
 
 
-### Aprecu
+### Apercu
 Ce projet consiste à mettre en place un assistant virtuel pour aider les étrangers, particuliement les étudiants dans leur démarche pour obtenir la carte de séjour.
 un chatbot au service des étrangers, un outil intéractif dynamique pour humaniser l'assistance de l'office de l'étranger aux étudiants exemptés d'avoir une 
 carte de séjour au Sénegal.
@@ -142,47 +142,54 @@ Pour obtenir des meilleurs résultats nous avons pu essayer des différents prom
 ![Architecture RAG](images/res2.jpg)
 
 Finalemement on pourrait modifier le modèle LLM mais le résultat était impéccable.Pour ce projet nous n'avons pas
-modifier le chunking, le nombre des segements est resté le même.
+modifier le chunking, le nombre des segements est resté le même.<br>
 
 
 ### Déploiement
 
-Après avoir testé le modèle plusieurs fois,  déployer ce modèle en tant qu’API pour pouvoir, ensuite, l’appeler à partir d’une
-application Flask qui se comportera comme le back-end et une application web pplication web front-end pour communiquer 
-avec l’API. L’application web écrite en HTML et en JavaScript pourra accéder au modèle via une requête HTTP communiquant avec le Flask Web Service 
+Après avoir testé le modèle plusieurs fois, nous avons déployé ce modèle en tant qu’API pour pouvoir, ensuite, l’appeler à partir d’une
+application Flask qui se comporte comme le back-end et une application web front-end pour communiquer avec l’API. 
+
+L’application web écrite en HTML et en JavaScript accède au modèle via une requête HTTP communiquant avec le Flask Web Service 
 Python. Le Flask envoie des requêtes HTTP à des fonctions, exécute le code de la fonction et affiche le résultat dans le navigateur 
 Dans notre cas, nous avons appliqué un chemin d’URL (‘/‘) sur une fonction : home. API Running on http://127.0.0.1:5000/
 Il suffit de saisir le lien précédent dans un navigateur Web pour accéder à l’application.
 
 
 Le but de l’application est de prendre des requêtes en entrée (Input) et de les transmettre à travers le modèle et retourne le résultats
+VOilà l'interface Web obtenue, une fois vous lancer le navigateur lancé vous avez un champ pour taper votre requête puis l'application 
+vous retourne la réponse.
 
+- Querry 1: Quels sont les documents nécessaires pour une carte de sejour au sénégal? l'illustration en bas montre le résultat
 
  ![Architecture RAG](images/api-result.jpg)
+ 
+ Après avoir réçu une réponse vous avez la possibilité de pauser une autre question ou démander plus des détails
+ 
+ - Querry 2: Combien de temps un étranger peut-il rester au Senegal sans carte de séjour?
+ 
+ ![Architecture RAG](images/apii-result.jpg)
 
 
 ### Améliorations futures
 
-* Élargissement de la base de données de documents : ajout de documents plus diversifiés liés à 
+* Élargissement de la base de données de documents : ajout des documents plus diversifiés liés à 
 d'autres processus et formalités au Sénégal. 
 
 
 * Affiner le LLM : affiner le modèle Mistral ou explorer d'autres modèles pour améliorer la 
 qualité de réponse pour les requêtes plus complexes. 
 
-* Optimiser la vitesse : explorer l'accélération GPU pour la recherche vectorielle et l'inférence 
-de modèle pour gérer des ensembles de données plus volumineux et des tâches plus intensives
+* Un autre défis soulevé est la sécurité, nous devons garantir la sécurité et la confidentialité des données
+certaines techniques de cryptage, telles que  le cryptage homomorphique, peuvent être utilisées pour protéger les données sensibles.
 
 **NOTICE:**
 
 - Il y'a un défi sur l'évolutivité et performances en temps réel. les mises à jours de notre documention comme pour d'autres 
-assistants virtuelles doit générer des réponses presque instantanément et à jour. Nous devons penser à mettre régulieèrement nos documentations
-(sources) à jour, un système de mise à jour automatique serait plus judicieux.
+assistants virtuelles doit générer des réponses presque instantanément et à jour.
+Nous devons penser à mettre régulièrement nos documentations (sources) à jour, un système de mise à jour automatique serait
+plus judicieux.
 
-- Un autre défis soulevé est la sécurité, nous devons garantir la sécurité et la confidentialité des données
-certaines techniques de cryptage, telles que  le cryptage homomorphique, peuvent être utilisées pour protéger les données sensibles.
-En outre, des audits de sécurité réguliere et le respect des  réglementations pertinentes en matière de protection des données (par exemple, GDPR, HIPAA) 
-sont essentiels pour maintenir l'intégrité et la confidentialité du système.*
 
 **Merci**
 
